@@ -70,9 +70,10 @@ while(i < 111) {
 var numArray = [2, 17, 9, 24, 8];
 
 for(i=0; i<5; i++) {
-    if (numArray[i].value > 10 && numArray[i].value % 2 === 0) {
+    var q6num = numArray[i];
+    if ((q6num > 10) && (q6num % 2 === 0)) {
       document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is even and greater than 10." + "</p>";
-    } else if (numArray[i].value <= 10 && numArray[i].value % 2 === 0) {
+    } else if ((q6num <= 10) && (q6num % 2 === 0)) {
       document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is even." + "</p>";
     }
       else {
@@ -102,7 +103,11 @@ for(i=0; i<7; i++) {
 // ######
 // #######
 
-
+var numsign = "";
+for(i=0; i<7; i++) {
+  numsign += "#";
+  document.getElementById("q8").innerHTML += "<p>" + numsign + "</p>";
+};
 
 
 
@@ -114,7 +119,18 @@ for(i=0; i<7; i++) {
 // If the number is divisible by 5, print "Buzz" instead of the number.
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
-
+for(i = 0; i < 101; i++) {
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+      document.getElementById("q9").innerHTML += "<p>" + "FizzBuzz" + "</p>";
+    } else if (i % 3 === 0) {
+      document.getElementById("q9").innerHTML += "<p>" + "Fizz" + "</p>";
+    } else if (i % 5 === 0) {
+      document.getElementById("q9").innerHTML += "<p>" + "Buzz" + "</p>";
+    }
+      else {
+        document.getElementById("q9").innerHTML += "<p>" + i + "</p>";
+      }
+};
 
 
 
