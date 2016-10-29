@@ -54,10 +54,14 @@ for(i = 0; i<5; i++) {
 //     Display in unique paragraphs the sentence "At home, I have _____ cats."
 //     The numbers should range from 10 to 110, in increments of 25.
 
-// for(i = 10; i<111; i+=25) {
-  // document.getElementById("q5a").innerHTML += "<p>" + "At home, I have " + i + " cats." "</p>";
-// };
-
+for(i = 10; i<111; i+=25) {
+  document.getElementById("q5a").innerHTML += "<p>" + "At home, I have " + i + " cats." + "</p>";
+};
+var i = 10;
+while(i < 111) {
+  document.getElementById("q5b").innerHTML += "<p>" + "At home, I have " + i + " cats." + "</p>";
+  i+=25;
+};
 
 
 // 6. Given the following Array, display in unique paragraphs'Even' if the number is even, 'Even and greater than 10' if the
@@ -65,15 +69,26 @@ for(i = 0; i<5; i++) {
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
 
-
-
+for(i=0; i<5; i++) {
+    if (numArray[i].value > 10 && numArray[i].value % 2 === 0) {
+      document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is even and greater than 10." + "</p>";
+    } else if (numArray[i].value <= 10 && numArray[i].value % 2 === 0) {
+      document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is even." + "</p>";
+    }
+      else {
+        document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is odd." + "</p>";
+      }
+};
 
 
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
 var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 65, 67, 73, 75, 77];
 
+var numThrees = [numArray[0], numArray[3], numArray[6], numArray[9], numArray[12], numArray[15], numArray[18]];
 
-
+for(i=0; i<7; i++) {
+    document.getElementById("q7").innerHTML += "<p>" + numThrees[i] + "</p>";
+};
 
 
 
