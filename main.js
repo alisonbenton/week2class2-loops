@@ -161,8 +161,15 @@ for(i = 0; i < 101; i++) {
 // ADVANCED TRACK
 // 16. Write a conditional statement to find the largest of the numbers in the array provided.
 var largestNum = [-5, -2, -6, 0, -1]
+var compareNum = [-5, -2, -6, 0, -1]
+var biggestnum = compareNum[0]
 
-
+for (i = 0; i<5; i++) {
+  if (largestNum[i] > biggestnum) {
+    biggestnum = largestNum[i]
+  }
+}
+document.getElementById("q16").innerHTML += "<p>" + biggestnum + "</p>";
 
 
 // HEADS OR TAILS?
@@ -173,16 +180,24 @@ var largestNum = [-5, -2, -6, 0, -1]
 //     Calling Math.floor on that number will truncate the decimal, and give you a
 //     random number within the bounds of your array. (In this case, our array will only contain two items.)
 
-
+var options = ["heads", "tails"]
+var randomizer = options[coin];
+document.getElementById("q17").innerHTML += "<p>" + randomizer + "</p>";
 
 
 
 
 // 18. Use a do/while loop to keep flipping the coin until you get tails.
 
-
-
-
+var coin = Math.floor(Math.random() * 2);
+var options = ["heads", "tails"]
+var randomizer = options[coin];
+do {
+  var coin = Math.floor(Math.random() * 2);
+  if (coin === 1){
+    document.getElementById("q18").innerHTML = "<p> Tails!</p>"
+  }
+} while (randomizer === "heads");
 
 
 // CHESS BOARD
@@ -200,7 +215,14 @@ var largestNum = [-5, -2, -6, 0, -1]
 //  # # # #
 // # # # #
 
+// var chessA = [" ", "#"," ","#"," ","#"," ","#"]
+// var chessB = ["#,"," ", "#"," ","#"," ","#"," "]
 
+// for (i = 0, i < 8, i++) {
+  // if (i%2 === 0) {
+    // document.getElementById(q19).innerHTML += "<p>" + chessB.string
+  // } else {document.getElementById(q19).innerHTML += "<p>" + chessA.string}
+// };
 
 
 
